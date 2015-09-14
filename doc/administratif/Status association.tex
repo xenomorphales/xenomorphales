@@ -1,0 +1,306 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{emptypage}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{etoolbox}
+\usepackage{lastpage}
+
+\title{Statuts de l'association}
+\author{Xenomorphales}
+\date{15 septembre 2015}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+	\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+	\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+\makeatletter
+\let\newtitle\@title
+\let\newauthor\@author
+\let\newdate\@date
+
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{15pt}
+\lhead{Status de l'association Xenormophales}
+\chead{}
+\rhead{}
+\lfoot{Rev 1.0 \textendash~\newdate}
+\cfoot{}
+\rfoot{Page : \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\hypersetup{
+	colorlinks,
+	linkcolor={black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{orange}{rgb}{0.90,0.35,0.06}
+
+\newcounter{ArticleCounter}
+\setcounter{ArticleCounter}{1}
+
+\newcommand{\article}[1]{\section*{\textsc{Article 
+			\ifnumcomp{\value{ArticleCounter}}{=}{1}{premier}{\arabic{ArticleCounter}} \textendash
+			\stepcounter{ArticleCounter}
+			#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+	\thispagestyle{empty}
+	\AddToShipoutPicture{%
+		%\AtUpperLeftCorner{1.5cm}{1.5cm}{blabla}
+		\AtUpperRightCorner{1.5cm}{1.5cm}{\includegraphics[height=2cm]{logo.png}}
+	}
+	\begin{center}
+		\vspace*{10cm}
+		\textsc{\newtitle}
+		\HRule
+		\vspace*{0.5cm}
+		\LARGE{\newauthor}
+		\vspace*{8.5cm}\\
+		\large{\newdate}
+	\end{center}
+\end{titlepage}
+\ClearShipoutPicture
+\setcounter{page}{2}
+
+\article{Nom}
+
+Il est fondé entre les adhérents aux présents statuts une association régie par la loi du 1er juillet 1901 et le décret du 16 août 1901, ayant pour titre : Xenomorphales
+
+\article{But objet}
+
+Cette association a pour objet :\newline
+Conception et réalisation d'objets techniques liés au domaine de la robotique. Organisation et participation à des événements pour la promotion de nos réalisations et de la robotique.
+
+\article{Siège social}
+
+Le siège social est fixé au 440 Chemin du bois d'aubigney 33290 Le Pian Médoc.\bigskip
+
+Il pourra être transféré par simple décision du conseil d'administration.
+
+\article{Durée}
+
+La durée de l'association est illimitée.
+
+\article{Composition}
+
+L'association se compose :\bigskip
+\begin{itemize}
+	\item De membres actifs.\bigskip
+	
+	Les membres actifs sont les personnes, physiques ou morales, participant ou intéressées par les activités développées par l'association.\bigskip
+	\item De membres bienfaiteurs.\bigskip
+	
+	Les membres bienfaiteurs sont les personnes, physiques ou morales, qui ont apporté une contribution financière, matérielle ou immobilière importante à l'association.\bigskip
+	\item Des personnes morales peuvent être membres de l'association. Elles sont représentées par leur représentant légal ou toute autre personne dûment habilitée à cet effet.\bigskip
+	
+	Quel que soit le nombre de personnes physiques qui la représentent, la personne morale ne dispose que d'une seule voix.
+\end{itemize}
+
+\article{Admission}
+
+L'association est ouverte à tous, sans condition ni distinction. Néanmoins, pour faire partie de l'association, il faut être agréé par le conseil d'administration, qui statue, lors de chacune de ses réunions, sur les demandes d'admission présentées.
+
+\article{Radations}
+
+La qualité de membre se perd :\bigskip
+\begin{itemize}
+	\item par démission ;
+	\item par décès ;
+	\item par disparition, liquidation ou fusion, s'il s'agit d'une personne morale ;
+	\item en cas d'exclusion prononcée par le Conseil d'Administration pour motif grave, notamment pour toute action portant ou tendant à porter atteinte aux intérêts matériels et moraux de l'association.
+\end{itemize}~
+
+Dans cette dernière hypothèse, la décision est notifiée au membre exclu dans les jours qui suivent la décision par lettre recommandée ou par courriel. Le membre exclu peut, dans un délai de sept jours après cette notification, présenter un recours devant l'assemblée générale, réunie a cet effet dans un délai de deux semaines.
+
+\article{Ressources de l'association}
+
+Les ressources de l'association se composent :\bigskip
+\begin{itemize}
+	\item des subventions qui peuvent lui être accordées par l'\'Etat et autres collectivités publiques ;
+	\item des capitaux provenant des économies réalisées sur son budget annuel ;
+	\item des dons manuels, notamment dans le cadre du mécénat ;
+	\item des intérêts et revenus des biens et valeurs appartenant à l'association ;
+	\item de toute autre ressource autorisée par la loi.
+\end{itemize}
+
+\article{Comptabilité}
+
+La comptabilité est tenue selon les règles légales, dans les conditions définies aux articles 27 à 29 de la loi du 1er mars 1984, avec établissement d'un bilan, d'un compte de résultat et d'une annexe, conformément au plan comptable en vigueur.
+
+\article{Conseil d'administration}
+
+L'association est administrée par un Conseil d'Administration compose de deux membres, élus pour un an par l'assemblée générale.\bigskip
+
+Les membres du Conseil d'Administration sont élus à la majorité plus une voix.\bigskip
+
+Les membres du Conseil d'Administration sont irrévocables pendant toute la durée de leur mandat.\bigskip
+
+Les personnes morales sont représentées par leur représentant légal en exercice, ou toute autre personne dûment habilitée à cet effet.\bigskip
+
+Le Conseil se renouvelle tous les ans ; les membres sortants sont rééligibles.\bigskip
+
+Pour être éligibles au Conseil d'Administration, les personnes doivent remplir les conditions suivants :\bigskip
+\begin{itemize}
+	\item être membre actif (ou adhérent) ;
+	\item avoir fait parvenir sa candidature au Conseil d'Administration au plus tard un jour avant la date de l'assemblée générale.
+\end{itemize}~
+
+À cet effet, deux semaines au minimum avant la date de l'assemblée générale au cours de laquelle se déroulera le scrutin pour le renouvellement statutaire du conseil, le président devra :\bigskip
+\begin{itemize}
+	\item informer les membres de la date de l'assemblée générale et du nombre de postes à pourvoir ;
+	\item rappeler le délai de recevabilité des candidatures.
+\end{itemize}~
+
+Mais l'ordre du jour complet de l'assemblée générale et la liste définitive des candidats sont adressés aux membres dans les conditions prévues à l'article 16 des présents statuts.\bigskip
+
+Le Conseil d'Administration dispose de tous les pouvoirs qui ne sont pas statutairement réservés à l'assemblée générale pour gérer, diriger et administrer l'association en toutes circonstances.\bigskip
+
+Le Conseil d'Administration est chargé de mettre en \oe uvre les décisions et la politique définies par l'assemblée générale. Il assure la gestion courante de l'association et rend compte de sa gestion à l'assemblée générale. 
+
+\article{Réunions du conseil}
+
+Le Conseil d'Administration se réunit toutes les fois que cela est nécessaire, et au moins une fois par an, sur convocation du président, ou sur la demande de ses membres.\bigskip
+
+Les décisions sont prises à l'unanimité.\bigskip
+
+L'ordre du jour des réunions est déterminé par le président, hormis le cas où le conseil se réunit sur la demande de ses membres.
+
+\article{Bureau}
+
+Le Conseil d'Administration compose également le bureau, composé de :\bigskip
+\begin{itemize}
+	\item un président ;
+	\item un trésorier.
+\end{itemize}~
+
+Les personnes morales sont représentées par leur représentant légal en exercice, ou toute autre personne dûment habilitée à cet effet.\bigskip
+
+Les postes des membres du bureau sont définis lors de l'élection du conseil d'administration.\bigskip
+
+Le bureau dispose de tous les pouvoirs pour assurer la gestion courante de l'association.\bigskip
+
+Le bureau se réunit au moins une fois par an, ou sur convocation du président chaque fois que nécessaire.\bigskip
+
+Tout membre qui, sans raison valable, n'aura pas assisté à trois réunions consécutives, pourra être considéré comme démissionnaire.\bigskip
+
+\article{Le président}
+
+Le président est chargé d'exécuter les décisions du bureau et d'assurer le bon fonctionnement de l'association.\bigskip
+
+Il représente l'association dans tous les actes de la vie civile et est investi de tous pouvoirs à cet effet. Il a notamment qualité pour agir en justice au nom de l'association, et consentir toutes transactions avec l'autorisation du Conseil d'Administration.\bigskip
+
+Le président convoque les assemblées générales et le Conseil d'Administration.\bigskip
+
+Il fait ouvrir et fonctionner au nom de l'association, auprès de toute banque ou tout établissement de crédit, tout compte de dépôt ou compte courant. Il crée, signe, accepte, endosse et acquitte tout chèque et ordre de virement pour le fonctionnement des comptes.\bigskip
+
+Il peut déléguer à un autre membre, a un permanent de l'association ou toute personne qu'il jugera utile, certains des pouvoirs ci-dessus énoncés.\bigskip
+
+Toutefois, la représentation de l'association en justice, à défaut du président, ne peut être assurée que par un mandataire agissant en vertu d'un pouvoir spécial.
+
+\article{Le trésorier}
+
+Le trésorier est chargé de la gestion de l'association, perçoit les recettes, effectue les paiements, sous le contrôle du président. Il tient une comptabilité régulière de toutes les opérations et rend compte à l'assemblée générale qui statue sur la gestion.\bigskip
+
+Il fait ouvrir et fonctionner au nom de l'association, auprès de toute banque ou tout établissement de crédit, tout compte de dépôt ou compte courant. Il crée, signe, accepte, endosse et acquitte tout chèque et ordre de virement pour le fonctionnement des comptes.
+
+\article{Assemblées générales}
+
+Les assemblées générales se composent de tous les membres.\bigskip
+
+Les décisions sont obligatoires pour tous. Les assemblées générales sont ordinaires ou extraordinaires.\bigskip
+
+Les décisions sont prises à la majorité des présents plus une voix.
+
+\article{Assemblée générale ordinaire}
+
+L'assemblée générale est convoquée une fois par an, et chaque fois que nécessaire, par le président ou à la demande de au moins la moitié des membres.\bigskip
+
+L'ordre du jour est fixé par le Conseil d'Administration et est indiqué sur les convocations.\bigskip
+
+Seuls les points indiqués à l'ordre du jour peuvent faire l'objet d'une décision.\bigskip
+
+L'assemblée générale entend les rapports sur la gestion du Conseil d'Administration et sur la situation financière et morale de l'association.\bigskip
+
+Elle approuve les comptes de l'exercice clos, vote le budget de l'exercice suivant, et pourvoit, s'il y a lieu, au renouvellement des membres du Conseil d'Administration.\bigskip
+
+Les décisions de l'assemblée générale ordinaire sont valablement prises si la moitié des membres sont présents ou représentés.\bigskip
+
+À cet effet, il est tenu une liste des membres que chaque personne présente émarge en son nom propre et pour la ou les personne(s) qu'elle représente, si le vote par procuration est possible.\bigskip
+
+Si ce quorum n'est pas atteint, l'assemblée est à nouveau convoquée à deux semaines d'intervalle et peut alors délibérer quel que soit le nombre de membres présents ou représentés.\bigskip
+
+Les décisions sont prises à la majorité des présents plus une voix.\bigskip
+
+Les délibérations de l'assemblée générale sont prises à main levée. Le scrutin à bulletin secret peut être demandé par le Conseil d'Administration ou par les membres présents.
+
+\article{Assemblée générale extraordinaire}
+
+L'assemblée générale extraordinaire a seule compétence pour modifier les statuts, décider la dissolution de l'association et l'attribution des biens de l'association, sa fusion avec toute autre association poursuivant un but analogue, ou son affiliation à une union d'associations, proposée par le Conseil d'Administration ou des membres de l'association.\bigskip
+
+Elle doit être convoquée spécialement à cet effet, par le président ou à la requête de membres de l'association dans un délai de deux semaines avant la date fixée.\bigskip
+
+La convocation doit indiquer l'ordre du jour et comporter en annexe le texte de la modification proposée.\bigskip
+
+Les modifications statutaires ne peuvent être proposées à l'assemblée générale extraordinaire que par le Conseil d'Administration avec l'assentiment préalable des membres de droit.\bigskip
+
+Elle doit être composée de membres présents ou représentés, ayant le droit de vote aux assemblées.\bigskip
+
+Chaque membre présent ne peut détenir plus de pouvoirs de représentation. Une feuille de présence est émargée et certifiée par les membres du bureau.\bigskip
+
+Si ce quorum n'est pas atteint, l'assemblée est à nouveau convoquée à deux semaines d'intervalle et peut alors délibérer quel que soit le nombre de membres présents ou représentés.\bigskip
+
+Les décisions sont prises à la majorité des présents plus une voix.\bigskip
+
+Les délibérations de l'assemblée générale sont prises à main levée. Le scrutin à bulletin secret peut être demandé par le Conseil d'Administration ou par les membres présents.
+
+\article{Dissolution}
+
+En cas de dissolution volontaire, statutaire ou judiciaire, l'assemblée extraordinaire désigne un ou plusieurs liquidateurs et l'actif, s'il y a lieu, est dévolu conformément à l'article 9 de la loi du 1er juillet 1901 et au décret du 16 août 1901.
+
+\article{Procès-verbaux}
+
+Les délibérations et résolutions des assemblées générales sont établies sans blanc ni rature, sur des feuillets numérotés paraphés par le président et consignés dans un registre spécial, conservé au siège de l'association.
+
+\article{Formalités}
+
+Le président, au nom du bureau, est chargé de remplir les formalités de déclarations et de publications prévues par la loi du 1er juillet 1901 et par le décret du 16 août 1901.\bigskip
+
+Le Conseil d'Administration peut donner mandat exprès à toute personne de son choix pour accomplir les formalités de déclarations et de publications prévues par la loi du 1er juillet 1901 et par le décret du 16 août 1901.\bigskip
+
+Ils ont été établis en autant d'exemplaires que de parties intéressées, dont deux pour la déclaration et un pour l'association.
+
+\newpage
+
+\vspace*{5cm}
+
+Fait à\bigskip
+
+Le\bigskip
+
+Signatures (président et trésorier)
+
+\end{document}

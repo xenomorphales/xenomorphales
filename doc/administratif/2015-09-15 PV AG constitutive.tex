@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{emptypage}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{etoolbox}
+
+\title{Procès-verbal de l'assemblée générale constitutive}
+\author{Xenomorphales}
+\date{15 septembre 2015}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+	\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+	\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+\makeatletter
+\let\newtitle\@title
+\let\newauthor\@author
+\let\newdate\@date
+
+\hypersetup{
+	colorlinks,
+	linkcolor={black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{orange}{rgb}{0.90,0.35,0.06}
+
+\begin{document}
+
+\AddToShipoutPicture{%
+	%\AtUpperLeftCorner{1.5cm}{1.5cm}{blabla}
+	\AtUpperRightCorner{1.5cm}{1.5cm}{\includegraphics[height=2cm]{logo.png}}
+}
+
+\pagestyle{empty}
+
+\noindent Association Xenomorphales\\
+440 Chemin du bois d'aubigney\\
+33290 Le Pian Médoc
+
+\begin{center}
+	\textbf{Procès-verbal de l'assemblée générale constitutive du \newdate}
+\end{center}
+
+Le \newdate~à 16 heures, les fondateurs de l'association Xenomorphales se sont réunis en assemblée générale constitutive au local d'EIRBOT, à l'ENSEIRB-Matmeca, 1 rue du Docteur Albert Schweitzer - 33402 Talence.\bigskip
+
+Sont présents :
+\begin{itemize}
+	\item Dauphin, Loïc, 1 Rue Jouis, Appartement 6, 33400 Talence
+	\item Lansmarie, Clément, 440 Chemin du bois d'aubigney 33290 le Pian Médoc
+\end{itemize}\bigskip
+
+L'assemblée générale désigne Loïc DAUPHIN en qualité de président de séance et Clément LANSMARIE en qualité de secrétaire de séance.\\
+Le président de séance met à la disposition des présents le projet de statuts de l'association et l'état des actes passés pour le compte de l'association en formation.\bigskip
+
+Puis il rappelle que l'assemblée générale constitutive est appelée à statuer sur l'ordre du jour suivant :
+\begin{itemize}
+	\item présentation du projet de constitution de l'association ;
+	\item présentation du projet de statuts ;
+	\item adoption des statuts ;
+	\item désignation des premiers membres du conseil ;
+	\item reprises des actes passés pour le compte de l'association en formation ;
+	\item pouvoirs en vue des formalités de déclaration et publication.
+\end{itemize}\bigskip
+
+Enfin, le président expose les motifs du projet de création de l'association et commente le projet de statuts.\\
+Il ouvre la discussion. Un débat s'instaure entre les membres de l'assemblée.\\
+Après quoi, personne ne demandant plus la parole, le président met successivement aux voix les délibérations suivantes.\bigskip
+
+1ère délibération : L'assemblée générale adopte les statuts dont le projet lui a été soumis.\\
+Cette délibération est adoptée à l'unanimité.
+
+2ème délibération : L'assemblée générale constitutive désigne en qualité de premiers membres du conseil
+\begin{itemize}
+	\item Dauphin, Loïc, français, 1 Rue Jouis, Appartement 6, 33400 Talence, Ingénieur, à la fonction de Président
+	\item Lansmarie, Clément, français, 440 Chemin du bois d'aubigney 33290 Le Pian Médoc, Ingénieur, à la fonction de Trésorier
+\end{itemize}\bigskip
+
+Conformément aux statuts, cette désignation est faite pour une durée expirant lors de l'assemblée générale qui sera appelée à statuer sur les comptes de l'exercice clos le 15 septembre 2016.\bigskip
+
+Les membres du conseil ainsi désignés acceptent leurs fonctions.
+
+\begin{center}
+	\textbf{Signature(s)}
+\end{center}
+
+\end{document}
