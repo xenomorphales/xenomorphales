@@ -1,4 +1,4 @@
 # Xenomorphales
 
- - [Site Web](http://astralien3000.github.io/xenomorphales)
+ - [Site Web](http://xenomorphales.org/)
  - [Gestion de projet](https://waffle.io/xenomorphales/xenomorphales)
